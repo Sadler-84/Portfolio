@@ -10,14 +10,41 @@
   <header>
     <div class="header-fluid">
       <nav class="header-navigation">
-        <a href="#studing">Учёба</a>
-        <a href="#achievments">Достижения</a>
-        <a href="#communication">Связь</a>
+        <p>Савельев Роман</p>
+        <div class="nav-links">
+          <a href="#studing">Учёба</a>
+          <a href="#achievments">Достижения</a>
+          <a href="#communication">Связь</a>
+        </div>
       </nav>
     </div>
   </header>
   <div class="content">
-    <p style="font-size: 64px">Savelyev Roman</p>
+    <p>Привет! Меня зовут Савельев Роман, и я увлекаюсь программированием, инженерией и робототехникой.
+      С 7 лет я занимаюсь робототехникой, участвую в турнирах и олимпиадах, учусь в лингвистическом 
+      классе московской школы №1251 и продолжаю развиваться в области точных наук.
+    </p>
+    <h1>Интересные места</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Координаты</th>
+                <th>Название</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for place in places %}
+            <tr>
+                <td>{{ place[0] }}</td>
+                <td>{{ place[1] }}</td>
+                <td>{{ place[2] }}</td>
+                <td>{{ place[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
   </div>
 
 </body>
